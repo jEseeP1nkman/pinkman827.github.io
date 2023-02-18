@@ -24,7 +24,7 @@
 
   
 
-  <title>Github部署 | jEseea</title>
+  <title>科学上网 | jEseea</title>
 
   
 
@@ -100,11 +100,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Github部署</h1>
+          <h1 class="title-wrap">科学上网</h1>
           <h2 class="title-sub-wrap">
             <strong>jEseeP1nkman</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2023-02-12T09:14:58.000Z" itemprop="datePublished">2023-02-12</time>
+            <time  class="article-date" datetime="2023-02-18T02:33:23.000Z" itemprop="datePublished">2023-02-18</time>
           </h2>
           
           
@@ -113,7 +113,7 @@
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/Github/">🏷️ Github</a></li>
+    <li><a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">🏷️ 科学上网</a></li>
   
 </ul>
         </div>
@@ -137,50 +137,26 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="Github部署"><a href="#Github部署" class="headerlink" title="Github部署"></a>Github部署</h1><h2>1. 创建一个仓库</h2>
+        <h1 id="怎么科学上网？"><a href="#怎么科学上网？" class="headerlink" title="怎么科学上网？"></a>怎么科学上网？</h1><p>我的方法是使用代理软件 如 Clash,V2rayN 等。</p>
+<p>这里我推荐<a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg">Clash</a><br>以及对Clash的<a target="_blank" rel="noopener" href="https://docs.cfw.lbyczf.com/">介绍</a></p>
+<h2>下载链接</h2>
 
-<p>仓库名必须是用户名 + .github.io<br>然后勾选初始化README</p>
-<p>我们暂时不能直接上传，需要进行一些配置，如下：</p>
-<p>接下来需要我们创建一个git秘钥</p>
-<p>打开git bash（不要求在哪个目录）</p>
-<p>执行： “这里面是你的邮箱”</p>
-<p>不管出现什么信息，你只需要回车就可以了</p>
+<p>Clash for Windows</p>
 <blockquote>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#114;&#95;&#101;&#109;&#97;&#x69;&#108;&#x40;&#x79;&#x6f;&#x75;&#114;&#101;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#117;&#114;&#95;&#101;&#109;&#97;&#x69;&#108;&#x40;&#x79;&#x6f;&#x75;&#114;&#101;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
-</blockquote>
-<p>然后执行</p>
+<p>v 0.20.16</p>
 <blockquote>
-<p>$ cat ~&#x2F;.ssh&#x2F;id_rsa.pub</p>
-</blockquote>
-<p>会输出你的秘钥，我们复制输出信息就行了</p>
-<p>然后点击头像，点击Settings–SSH·····–New SSH Key</p>
-<p>粘贴你复制的秘钥</p>
-<p>然后打开git bash<br>执行：</p>
-<blockquote>
-<p>$  ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#109;</a><br>会提示你下面这个，输入yes回车就行了</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.16/Clash.for.Windows.Setup.0.20.16.ia32.exe">Clash.for.Windows.Setup.0.20.16.ia32.exe</a></p>
 </blockquote>
 <blockquote>
-<p>Are you sure you want to continue connecting (yes&#x2F;no&#x2F;[fingerprint])? </p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.16/Clash.for.Windows-0.20.16-win.7z">Clash.for.Windows-0.20.16-win.7z</a></p>
 </blockquote>
-<h2>2. 复制git开头的地址</h2>
-
-<p>打开站点配置文件</p>
-<p>修改deploy信息</p>
-<blockquote>
-<p>deploy:<br> type: git<br> repo: 你复制的地址<br> branch: main</p>
 </blockquote>
-<p>在博客根目录下打开git bash<br>分别执行下面的命令：</p>
-<p>(yourname是你的名字,youremail是你的邮箱)</p>
+<p>Clash for Android</p>
 <blockquote>
-<p>$ git config –global user.name “yourname”<br>$ git config –global user.email “youremail”</p>
+<p>v2.5.12</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/Kr328/ClashForAndroid/releases/download/v2.5.12/cfa-2.5.12-foss-universal-release.apk">cfa-2.5.12-foss-universal-release.apk</a></p>
 </blockquote>
-<p>然后安装上传插件</p>
-<blockquote>
-<p>cnpm install hexo-deployer-git –save</p>
-</blockquote>
-<p>在博客根目录下打开git bash，执行下面的命令就可以上传了</p>
-<blockquote>
-<p>hexo g -d</p>
 </blockquote>
 
       </section>
@@ -189,20 +165,20 @@
       
         <nav class="article-nav">
           
+          
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2023/02/12/Steam/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Steam离线账号</h2>
+        <a href="/2023/02/12/Chrome/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Chrome打开或关闭快捷静音</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       
